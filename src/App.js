@@ -13,6 +13,11 @@ import Home from './Components/Home';
 import CreateAccount from './Components/CreateAccount';
 import AddAssets from './Components/AddAssets'
 
+// Routing
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+
 // *** ----- Styling  ----- ***
 
 // const AppContainer = styled.div`
@@ -28,10 +33,12 @@ import AddAssets from './Components/AddAssets'
 
 function App() {
   return (
+    <Router>
     <div className="App">
         <NavBar />
         <h1>BTC Net Worth Application</h1>
     </div>
+    </Router>
   );
 }
 

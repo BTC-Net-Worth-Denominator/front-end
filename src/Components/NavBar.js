@@ -1,7 +1,6 @@
 // Imports
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
 
 // Styling
 
@@ -25,22 +24,21 @@ import { useHistory } from 'react-router-dom';
 
 const NavBar = () => {
 
-     const { push } = useHistory();
-
-    const handleLogout = () => {
-        localStorage.removeItem('token');
-        push('/login')
-    }
-
     return (
         <div>
             <Link to='/'><h2>Home</h2></Link>
+            <br />
             <Link to='/process' >The Process</Link>
+            <br />
             <Link to='/add-assets'>Add Assets</Link>
+            <br />
             <Link to='/portfolio'>View Portfolio</Link>
+            <br />
             <Link to='/create-account'>Create Account</Link>
+            <br />
             <Link to='/login'>Login</Link>
-            <button onClick={handleLogout}>Logout</button>
+            <br />
+            <button>Logout</button>
         </div>
     )
 
