@@ -1,5 +1,17 @@
+// Imports 
+
 import './App.css';
 import React from 'react';
+
+// Component Imports
+
+import Process from './Components/TheProcess';
+import Portfolio from './Components/Portfolio';
+import NavBar from './Components/NavBar';
+import Login from './Components/Login';
+import Home from './Components/Home';
+import CreateAccount from './Components/CreateAccount';
+import AddAssets from './Components/AddAssets'
 
 // *** ----- Styling  ----- ***
 
@@ -17,9 +29,8 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+        <NavBar />
         <h1>BTC Net Worth Application</h1>
-      </header>
     </div>
   );
 }
