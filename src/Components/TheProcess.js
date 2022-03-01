@@ -5,7 +5,27 @@ const Process = () => {
 
     return(
         <div>
-            <h2>The Process Component</h2>
+            <center><h1>The Process</h1></center>
+            <br />
+            <div>
+                <img></img>
+                <h3>Create an account</h3>
+            </div>
+            <br />
+            <div>
+                <img></img>
+                <h3>Add assets to your portfolio</h3>
+            </div>
+            <br />
+            <div>
+                <img></img>
+                <h3>Assign a USD value to your asset</h3>
+            </div>
+            <br />
+            <div>
+                <img></img>
+                <h3>View entire net worth denominated in BTC</h3>
+            </div>
         </div>
     )
 }
