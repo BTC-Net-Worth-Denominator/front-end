@@ -5,7 +5,17 @@ const Home = () => {
 
     return(
         <div>
-            <h2>Home Component</h2>
+            <img>{/*bitcoin logo here*/}</img>
+            <h1>BTC Net Worth Calculator</h1>
+            <br />
+            <h3>Calculate your asset's worth in sats.</h3>
+            <br />
+            <Link to="/create-account" >
+            <h4>Create Account</h4>
+            </Link>
+            <Link to="/login" >
+            <h4>Login</h4>
+            </Link>
         </div>
     )
 }

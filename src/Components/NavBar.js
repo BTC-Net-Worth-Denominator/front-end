@@ -26,7 +26,7 @@ const NavBar = () => {
 
     return (
         <div>
-            <Link to='/'><h2>Home</h2></Link>
+            <Link to='/'>Home</Link>
             <br />
             <Link to='/process' >The Process</Link>
             <br />
