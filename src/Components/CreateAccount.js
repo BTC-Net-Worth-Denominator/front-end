@@ -26,7 +26,7 @@ const CreateAccount = () => {
 
         e.preventDefault();
 
-        // axios.post(`https://potluckplan.herokuapp.com/api/auth/register`, credentials)
+        // axios.post(``, credentials)
         // .then(resp => {
         //     console.log(resp)
         //     setLoginMessage(resp.data.message)
@@ -36,6 +36,10 @@ const CreateAccount = () => {
         // })
 
     }
+
+    // Add in error messages:
+    // 1. Username already taken
+    // 2. Password too short
 
     return(
         <div>
