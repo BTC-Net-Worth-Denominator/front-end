@@ -30,19 +30,20 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // 	flex-direction: column;
 // `;
 
-
 function App() {
   return (
     <Router>
-    <div className="App">
+      
         <NavBar />
+
         {/* <Route exact path='/process' component={Process}/>
         <Route exact path='/portfolio' component={Portfolio}/>
         <Route exact path='/create-account' component={CreateAccount}/>
         <Route exact path='/add-assets' component={AddAssets}/>
-        <Route exact path="/login" component={Login} /> 
-        <Route path="/" component={Home} /> */}
-    </div>
+        <Route exact path="/login" component={Login} /> */}
+        <br />
+        <Route path="/" component={Home} /> 
+    
     </Router>
   );
 }
