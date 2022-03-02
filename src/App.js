@@ -15,7 +15,7 @@ import AddAssets from './Components/AddAssets'
 
 // Routing
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 
 
 // *** ----- Styling  ----- ***
@@ -32,19 +32,17 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
-      
+    <div>
         <NavBar />
-
-        {/* <Route exact path='/process' component={Process}/>
-        <Route exact path='/portfolio' component={Portfolio}/>
-        <Route exact path='/create-account' component={CreateAccount}/>
-        <Route exact path='/add-assets' component={AddAssets}/>
-        <Route exact path="/login" component={Login} /> */}
-        <br />
-        <Route path="/" component={Home} /> 
-    
-    </Router>
+        <Routes>
+          <Route exact path='/process' component={Process}/>
+          <Route exact path='/portfolio' component={Portfolio}/>
+          <Route exact path='/create-account' component={CreateAccount}/>
+          <Route exact path='/add-assets' component={AddAssets}/>
+          <Route exact path="/login" component={Login} />
+          <Route path="/" component={Home} />
+        </Routes>
+    </div>
   );
 }
 
