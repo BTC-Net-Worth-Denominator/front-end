@@ -15,7 +15,7 @@ import AddAssets from './Components/AddAssets'
 
 // Routing
 
-import { Route, Routes} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 
 // *** ----- Styling  ----- ***
@@ -34,14 +34,14 @@ function App() {
   return (
     <div>
         <NavBar />
-        <Routes>
+        <Switch>
           <Route exact path='/process' component={Process}/>
           <Route exact path='/portfolio' component={Portfolio}/>
           <Route exact path='/create-account' component={CreateAccount}/>
           <Route exact path='/add-assets' component={AddAssets}/>
           <Route exact path="/login" component={Login} />
           <Route path="/" component={Home} />
-        </Routes>
+        </Switch>
     </div>
   );
 }
