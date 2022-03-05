@@ -39,7 +39,7 @@ const Login = () => {
 
     return(
             <div>
-            <center><h1>Create Account</h1></center>
+            <center><h1>Login</h1></center>
             <form onSubmit={handleSubmit}>
                 <label>Username:
                     <input 
