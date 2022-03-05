@@ -15,13 +15,6 @@ const NavStyling = {
     margin: '1%'
  }
  
- const LinkStyling = {
-    color: 'white',
-    backgroundColor: '#9b8da1',
-    textAlign: 'center',
-    fontSize: 20,
-    padding: 15,
- }
 
 // *** Component ***
 

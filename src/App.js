@@ -42,7 +42,7 @@ function App() {
             <Route exact path='/create-account' component={CreateAccount}/>
             <Route exact path='/add-assets' component={AddAssets}/>
             <Route exact path="/login" component={Login} />
-            <Route path="/" component={Home} />
+            <Route exact path="/" component={Home} />
           </RouteContainer>
         </Switch>
       </AppContainer>
