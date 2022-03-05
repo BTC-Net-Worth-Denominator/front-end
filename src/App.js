@@ -2,6 +2,7 @@
 
 import './App.css';
 import React from 'react';
+import styled from 'styled-components';
 
 // Component Imports
 
@@ -18,30 +19,33 @@ import AddAssets from './Components/AddAssets'
 import { Route, Switch } from 'react-router-dom';
 
 
-// *** ----- Styling  ----- ***
-
-// const AppContainer = styled.div`
-// 	height: 100%;
-// `;
-// const RouteContainer = styled.div`
-// 	display: flex;
-// 	height: 85%;
-// 	align-items: center;
-// 	flex-direction: column;
-// `;
+const AppContainer = styled.div`
+	height: 100%;
+  padding: 3%;
+`;
+const RouteContainer = styled.div`
+	display: flex;
+	height: 85%;
+	align-items: center;
+	flex-direction: column;
+`;
 
 function App() {
   return (
     <div>
+      <AppContainer>
         <NavBar />
         <Switch>
-          <Route exact path='/process' component={Process}/>
-          <Route exact path='/portfolio' component={Portfolio}/>
-          <Route exact path='/create-account' component={CreateAccount}/>
-          <Route exact path='/add-assets' component={AddAssets}/>
-          <Route exact path="/login" component={Login} />
-          <Route path="/" component={Home} />
+          <RouteContainer>
+            <Route exact path='/process' component={Process}/>
+            <Route exact path='/portfolio' component={Portfolio}/>
+            <Route exact path='/create-account' component={CreateAccount}/>
+            <Route exact path='/add-assets' component={AddAssets}/>
+            <Route exact path="/login" component={Login} />
+            <Route path="/" component={Home} />
+          </RouteContainer>
         </Switch>
+      </AppContainer>
     </div>
   );
 }
