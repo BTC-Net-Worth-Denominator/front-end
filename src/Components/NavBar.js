@@ -1,31 +1,35 @@
 // Imports
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-// Styling
+// *** Styling ***
 
-// const NavStyling = {
-//     display: 'flex',
-//     flexDirection: 'row',
-//     justifyContent: 'space-between',
-//     textAlign: 'center',
-//     backgroundColor: '#9b8da1',
-//  }
+const NavStyling = {
+    display: 'flex',
+    padding: '2%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    textAlign: 'center',
+    backgroundColor: 'black',
+    margin: '1%'
+ }
  
-//  const LinkStyling = {
-//     color: 'white',
-//     backgroundColor: '#9b8da1',
-//     textAlign: 'center',
-//     fontSize: 20,
-//     padding: 15,
-//  }
+ const LinkStyling = {
+    color: 'white',
+    backgroundColor: '#9b8da1',
+    textAlign: 'center',
+    fontSize: 20,
+    padding: 15,
+ }
 
 // *** Component ***
 
 const NavBar = () => {
 
     return (
-        <div>
+        <div style={NavStyling}>
+            
             <Link to='/'>Home</Link>
             <br />
             <Link to='/process' >The Process</Link>
@@ -39,6 +43,7 @@ const NavBar = () => {
             <Link to='/login'>Login</Link>
             <br />
             <button>Logout</button>
+            
         </div>
     )
 
