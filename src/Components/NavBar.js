@@ -7,12 +7,12 @@ import styled from 'styled-components';
 
 const NavStyling = {
     display: 'flex',
-    padding: '2%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     textAlign: 'center',
-    backgroundColor: 'black',
-    margin: '1%'
+    backgroundColor: 'white',
+    margin: '1%',
+    color: 'black'
  }
  
 
@@ -22,7 +22,7 @@ const NavBar = () => {
 
     return (
         <div style={NavStyling}>
-            
+            <h2>BTC Asset Denominator App</h2>
             <Link to='/'>Home</Link>
             <br />
             <Link to='/process' >The Process</Link>

@@ -21,13 +21,12 @@ import { Route, Switch } from 'react-router-dom';
 
 const AppContainer = styled.div`
 	height: 100%;
-  padding: 3%;
+  background-color: black;
+  color: white;
 `;
+
 const RouteContainer = styled.div`
-	display: flex;
-	height: 85%;
-	align-items: center;
-	flex-direction: column;
+	padding: 5%;
 `;
 
 function App() {
