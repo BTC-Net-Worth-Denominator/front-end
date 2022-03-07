@@ -22,8 +22,9 @@ const NavBar = () => {
 
     return (
         <div style={NavStyling}>
+            <Link to='/'>
             <img src='https://peterdavidconley.com/wp-content/uploads/2022/03/bitcoin_logo.png' height='50px' width='50px'></img>
-            <Link to='/'>Home</Link>
+            </Link>
             <br />
             <Link to='/process' >The Process</Link>
             <br />
