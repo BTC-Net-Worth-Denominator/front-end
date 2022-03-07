@@ -1,6 +1,5 @@
 // Imports 
 
-import './App.css';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -21,6 +20,7 @@ import { Route, Switch } from 'react-router-dom';
 
 const AppContainer = styled.div`
 	height: 100%;
+  margin: 0;
   background-color: black;
   color: white;
 `;

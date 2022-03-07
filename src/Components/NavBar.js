@@ -11,7 +11,7 @@ const NavStyling = {
     justifyContent: 'space-between',
     textAlign: 'center',
     backgroundColor: 'white',
-    margin: '1%',
+    padding: '2%',
     color: 'black'
  }
  
