@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const DivContainer = styled.div`
+    height: 100%;
+`;
 
 const initialAsset = {
 
@@ -35,7 +40,7 @@ const AddAsset = () => {
     }
 
     return(
-        <div>
+        <DivContainer>
             <section>
                 <center><h1>Add Assets</h1></center>
             </section>
@@ -65,7 +70,7 @@ const AddAsset = () => {
             </form>
             </div>
             </section>
-        </div>
+        </DivContainer>
     )
 }
 

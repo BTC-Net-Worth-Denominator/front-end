@@ -31,11 +31,12 @@ const AppContainer = styled.div`
 
 const RouteContainer = styled.div`
 	padding: 5%;
+  height: 100%;
 `;
 
 function App() {
   return (
-    <div className={App}>
+    <div>
       <AppContainer>
         <NavBar />
         <Switch>
