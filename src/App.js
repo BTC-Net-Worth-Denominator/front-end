@@ -2,6 +2,9 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import './App.css';
+
+// import 
 
 // Component Imports
 
@@ -23,6 +26,7 @@ const AppContainer = styled.div`
   margin: 0;
   background-color: black;
   color: white;
+  
 `;
 
 const RouteContainer = styled.div`
@@ -31,7 +35,7 @@ const RouteContainer = styled.div`
 
 function App() {
   return (
-    <div>
+    <div className={App}>
       <AppContainer>
         <NavBar />
         <Switch>
