@@ -1,15 +1,22 @@
 import React from 'react';
 import Asset from './Asset'
+import styled from 'styled-components';
+
+const HeaderDiv = styled.div`
+    display: flex;
+    color: white;
+    width: 80%;
+`
 
 const Portfolio = () => {
 
     return(
         <div>
-            <section>
+            <HeaderDiv>
                 <h3>Remove Asset</h3>
                 <h1>View Portfolio</h1>
                 <h1>⟳</h1>
-            </section>
+            </HeaderDiv>
             <section>
                 <Asset />
             </section>
