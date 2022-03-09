@@ -11,8 +11,6 @@ const initialCredentials = {
 
 const HeaderDiv = styled.div`
     font-size: 30px;
-    display: flex;
-    align-self: center;
     color: white;
 `
 

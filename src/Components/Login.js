@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import styled from 'styled-components';
 
 const initialCredentials = {
     username: '',
@@ -9,6 +10,11 @@ const initialCredentials = {
 }
 
 const initialMessage = ''
+
+const HeaderDiv = styled.div`
+    font-size: 30px;
+    color: white;
+`
 
 const Login = () => {
 
@@ -39,7 +45,11 @@ const Login = () => {
 
     return(
             <div>
-            <center><h1>Login</h1></center>
+                <HeaderDiv>
+                    <center>
+                        <h1>Login</h1>
+                    </center>
+                </HeaderDiv>
             <form onSubmit={handleSubmit}>
                 <label>Username:
                     <input 
