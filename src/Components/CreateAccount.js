@@ -2,11 +2,19 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import styled from 'styled-components';
 
 const initialCredentials = {
     username: '',
     password: '',
 }
+
+const HeaderDiv = styled.div`
+    font-size: 30px;
+    display: flex;
+    align-self: center;
+    color: white;
+`
 
 const initialMessage = ''
 
@@ -43,7 +51,11 @@ const CreateAccount = () => {
 
     return(
         <div>
-            <center><h1>Create Account</h1></center>
+            <HeaderDiv>
+                <center>
+                    <h1>Create Account</h1>
+                </center>
+            </HeaderDiv>
             <form onSubmit={handleSubmit}>
                 <label>Enter Username:
                     <input 
