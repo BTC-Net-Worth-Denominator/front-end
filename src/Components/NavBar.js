@@ -1,6 +1,7 @@
 // Imports
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components'
 
 // *** Styling ***
 
@@ -12,6 +13,10 @@ const NavStyling = {
     backgroundColor: 'white',
     padding: '2%',
     color: 'black'
+ }
+
+ const ButtonStyling = {
+    backgroundColor: 'orange'
  }
  
 
@@ -35,8 +40,7 @@ const NavBar = () => {
             <br />
             <Link to='/login'>Login</Link>
             <br />
-            <button>Logout</button>
-            
+            <button style={ButtonStyling}>Logout</button>
         </div>
     )
 
