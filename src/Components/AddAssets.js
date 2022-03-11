@@ -28,6 +28,8 @@ const initialAsset = {
 const AddAsset = () => {
 
     const [ assets, setAssets ] = useState(initialAsset)
+    const { push } = useHistory();
+
 
     const handleChange = (e) => {
         setAssets({

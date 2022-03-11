@@ -1,6 +1,8 @@
 import React from 'react';
 import Asset from './Asset'
 import styled from 'styled-components';
+import { useHistory, useParams } from 'react-router-dom';
+import axiosWithAuth from '../Utils/axiosWithAuth';
 
 const HeaderDiv = styled.div`
     display: flex;
@@ -8,7 +10,25 @@ const HeaderDiv = styled.div`
     width: 80%;
 `
 
-const Portfolio = () => {
+const Portfolio = (props) => {
+
+    const { push } = useHistory();
+
+    // const user_id = useParams();
+	// const { portfolio } = props;
+
+    const handleDelete = () => {
+
+		// axiosWithAuth()
+		// .delete(``)
+		// .then( resp => {
+		// 	push(`/`)
+		// })
+		// .catch( err => {
+		// 	console.log(err)
+		// })
+
+	}
 
     return(
         <div>
@@ -21,7 +41,7 @@ const Portfolio = () => {
                 <Asset />
             </section>
             <section>
-                <img></img>
+                <h2 onClick={handleDelete}>X</h2>
                 <h2>Total Net Worth</h2>
                 <h2>6.55 BTC</h2>
             </section>
