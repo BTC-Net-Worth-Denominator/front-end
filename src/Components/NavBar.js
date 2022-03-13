@@ -18,12 +18,23 @@ const NavStyling = {
  const NavLinkStyling = {
     display: 'flex',
     flexDirection: 'row',
-    textAlign: 'center',
+    justifyContent: 'flex-end',
+    alignSelf: 'center',
     color: 'black'
  }
 
+ const LogoStyling = {
+     display: 'flex',
+     flexDirection: 'flex-start'
+ }
+
  const ButtonStyling = {
-    backgroundColor: 'orange'
+    backgroundColor: 'orange',
+    padding: '2%',
+ }
+
+ const LinkStyling = {
+     padding: '0% 2%',
  }
  
 
@@ -33,13 +44,13 @@ const NavBar = () => {
 
     return (
         <div style={NavStyling}>
-            <div>
+            <div style={LogoStyling}>
                 <Link to='/'>
                 <img src='https://peterdavidconley.com/wp-content/uploads/2022/03/bitcoin_logo.png' height='50px' width='50px'></img>
                 </Link>
             </div>
             <div style={NavLinkStyling}>
-                <Link to='/process' >The Process</Link>
+                <Link to='/process'  style={LinkStyling}>The Process</Link>
                 <br />
                 <Link to='/add-assets'>Add Assets</Link>
                 <br />
