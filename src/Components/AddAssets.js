@@ -10,12 +10,16 @@ const AssetField = styled.div`
     align-items: space-center;
 `;
 
-const AddAssetDiv = styled.div`
+const HeaderStyling = styled.div`
     background-color: orange;
     color: white;
     font-size: 20px;
     width: 50%;
     padding: 1%;
+`
+
+const AssetStyling = styled.div`
+    padding: 4% 0%;
 `
 
 const initialAsset = {
@@ -52,10 +56,10 @@ const AddAsset = () => {
     }
 
     return(
-        <div>
-            <AddAssetDiv>
+        <AssetStyling>
+            <HeaderStyling>
                 <center><h1>Add Assets</h1></center>
-            </AddAssetDiv>
+            </HeaderStyling>
             <section>
             <div>
                 <h3>Enter in an asset, with its current corresponding fair market value to add it to your portfolio.</h3>
@@ -124,7 +128,7 @@ const AddAsset = () => {
             </form>
             </AssetField>
             </section>
-        </div>
+        </AssetStyling>
     )
 }
 

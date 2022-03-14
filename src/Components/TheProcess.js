@@ -6,11 +6,16 @@ const StepContainer = styled.div`
     display: flex;
     align-items: flex-start;
 `
+
+const ProcessStyling = styled.div`
+    padding: 4% 0%;
+`
+
 const Process = () => {
 
 
     return(
-        <div>
+        <ProcessStyling>
             <center><h1>The Process</h1></center>
             <br />
             <StepContainer>
@@ -32,7 +37,7 @@ const Process = () => {
                 <h1>4</h1>
                 <h3>View entire net worth denominated in BTC</h3>
             </StepContainer>
-        </div>
+        </ProcessStyling>
     )
 }
 
