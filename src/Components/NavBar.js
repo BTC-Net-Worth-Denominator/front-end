@@ -8,7 +8,7 @@ import styled from 'styled-components'
 const NavStyling = {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     textAlign: 'center',
     backgroundColor: 'white',
     padding: '2%',
@@ -18,7 +18,7 @@ const NavStyling = {
  const NavLinkStyling = {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-around',
     alignSelf: 'center',
     color: 'black'
  }
