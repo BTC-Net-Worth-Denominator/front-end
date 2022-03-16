@@ -34,7 +34,7 @@ const NavStyling = {
  }
 
  const LinkStyling = {
-     padding: '0% 2%',
+     padding: '0% 5%',
  }
  
 
@@ -50,15 +50,15 @@ const NavBar = () => {
                 </Link>
             </div>
             <div style={NavLinkStyling}>
-                <Link to='/process'  style={LinkStyling}>The Process</Link>
+                <Link to='/process' style={LinkStyling}>The Process</Link>
                 <br />
-                <Link to='/add-assets'>Add Assets</Link>
+                <Link to='/add-assets' style={LinkStyling}>Add Assets</Link>
                 <br />
-                <Link to='/portfolio'>View Portfolio</Link>
+                <Link to='/portfolio' style={LinkStyling}>View Portfolio</Link>
                 <br />
-                <Link to='/create-account'>Create Account</Link>
+                <Link to='/create-account' style={LinkStyling}>Create Account</Link>
                 <br />
-                <Link to='/login'>Login</Link>
+                <Link to='/login' style={LinkStyling}>Login</Link>
                 <br />
                 <button style={ButtonStyling}>Logout</button>
             </div>
