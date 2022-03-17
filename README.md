@@ -12,6 +12,10 @@ I believe that in the future, Bitcoin will be the universal globally accepted fo
 
 [API (Heroku)](https://btc-net-worth.herokuapp.com/)
 
+### Main Contributors
+
+[Peter Conley](https://github.com/peterdavidconley)
+
 ## Design Specs
 
 The original front-end design can be found with this URL: https://www.canva.com/design/DAEzcWAX3CE/FSVAQBEJckm9dZaJyDv4cw/view?website#1
