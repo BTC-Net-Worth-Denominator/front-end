@@ -2,10 +2,38 @@
 
 This open source project allows you to create a user account, and upload your current assets, and then have a portfolio calculated in BTC opposed to USD.
 
+## Motivation
+
+I believe that in the future, Bitcoin will be the universal globally accepted form of base money. Every good and service will be denominated in it, instead of local fiat currency. This project helps you think in terms of accounting your wealth in BTC, instead of USD.
+
 ## Design Specs
 
 The original front-end design can be found with this URL: https://www.canva.com/design/DAEzcWAX3CE/FSVAQBEJckm9dZaJyDv4cw/view?website#1
 
+## Screenshots
+
+## Tech/framework used
+
+## Features
+
+This project is ahead of it's time, interms of common financial thinking. It's meant to change the way we think about money, by switching the base unit of account.
+
+## Project Installation
+
+## API Reference
+
+## How to Use
+
+1. User creates account by visiting /create-account page and submitting an username and password
+2. 
+
+## Contribute
+
+Contribute to this project by....
+
+## License
+
+MIT ©peterdavidconley
 
 ## Available Scripts
 
