@@ -7,6 +7,8 @@ const StepContainer = styled.div`
     justify-content: flex-start;
     align-items: center;
     font-size: 1.25rem;
+    border: white 5px solid;
+    margin: 1% 0%;
 `
 
 const HeadingStyling = styled.div`
@@ -23,7 +25,7 @@ const NumberStyling = styled.div`
     text-align: center;
     padding: 1%;
     width: 8%;
-    margin: 2%;
+    margin: 1%;
     color: black;
 `
 
