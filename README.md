@@ -22,6 +22,8 @@ The original front-end design can be found with this URL: https://www.canva.com/
 
 ## Screenshots
 
+
+
 ## Tech/framework used
 
 React
@@ -261,17 +263,17 @@ _Server Response:_
 ## How to Use
 
 1. User creates account by visiting /create-account page and submitting an username and password
-2. User adds assets to their portfolio, one by one
-3. User assigns USD value to each asset
-4. User can view entire portfolio denominated in BTC on portfolio page
+2. User adds assets to their portfolio, one by one, on page /add-assets
+3. User assigns USD value to each asset on page /add-assets
+4. User can view entire portfolio denominated in BTC on portfolio page /portfolio
 
 ## Contribute
 
-Contribute to this project by....
+Contribute to this project by submitting a pull request or submitting your information to this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdpodZtqpk_xZt77XGe2zGD0pjlc67T_6TwNAPHW54LIWGMXg/viewform?usp=sf_link)
 
 ## License
 
-MIT ©peterdavidconley
+©MIT
 
 ## Available Scripts
 
