@@ -17,6 +17,7 @@ I believe that in the future, Bitcoin will be the universal globally accepted fo
 ### Main Contributors
 
 [Peter Conley](https://github.com/peterdavidconley)
+
 [Brian Bellinger](https://github.com/bbellify)
 
 ## Design Specs
@@ -28,7 +29,7 @@ The original front-end design can be found with this URL: https://www.canva.com/
 Front-end: React
 Back-end: Node.js
 
-## Theory
+## Project Thesis
 
 This project is ahead of it's time, interms of common financial thinking. It's meant to change the way we think about money, by switching the base unit of account.
 
