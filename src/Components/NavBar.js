@@ -8,7 +8,7 @@ import styled from 'styled-components'
 const NavStyling = {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     textAlign: 'center',
     backgroundColor: 'white',
     padding: '2%',
@@ -18,7 +18,7 @@ const NavStyling = {
  const NavLinkStyling = {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-end',
     alignSelf: 'center',
     color: 'black'
  }
@@ -50,17 +50,17 @@ const NavBar = () => {
                 </Link>
             </div>
             <div style={NavLinkStyling}>
-                <Link to='/process' style={LinkStyling}>The Process</Link>
+                    <Link to='/process' style={LinkStyling}>The Process</Link>
                 <br />
-                <Link to='/add-assets' style={LinkStyling}>Add Assets</Link>
+                    <Link to='/add-assets' style={LinkStyling}>Add Assets</Link>
                 <br />
-                <Link to='/portfolio' style={LinkStyling}>View Portfolio</Link>
+                    <Link to='/portfolio' style={LinkStyling}>View Portfolio</Link>
                 <br />
-                <Link to='/create-account' style={LinkStyling}>Create Account</Link>
+                    <Link to='/create-account' style={LinkStyling}>Create Account</Link>
                 <br />
-                <Link to='/login' style={LinkStyling}>Login</Link>
+                    <Link to='/login' style={LinkStyling}>Login</Link>
                 <br />
-                <button style={ButtonStyling}>Logout</button>
+                    <button style={ButtonStyling}>Logout</button>
             </div>
         </div>
     )
