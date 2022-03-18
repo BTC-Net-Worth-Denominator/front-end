@@ -30,28 +30,28 @@ const Process = () => {
                 <NumberStyling>
                     <h1>1</h1>  
                 </NumberStyling>
-                <h3>Create an account</h3>
+                <h2>Create an account</h2>
             </StepContainer>
             <br />
             <StepContainer>
                 <NumberStyling>
                     <h1>2</h1>
                 </NumberStyling>
-                <h3>Add assets to your portfolio</h3>
+                <h2>Add assets to your portfolio</h2>
             </StepContainer>
             <br />
             <StepContainer>
                 <NumberStyling>
                     <h1>3</h1>
                 </NumberStyling>
-                <h3>Assign a USD value to your asset</h3>
+                <h2>Assign a USD value to your asset</h2>
             </StepContainer>
             <br />
             <StepContainer>
                 <NumberStyling>
                     <h1>4</h1>
                 </NumberStyling>
-                <h3>View entire net worth denominated in BTC</h3>
+                <h2>View entire net worth denominated in BTC</h2>
             </StepContainer>
         </ProcessStyling>
     )

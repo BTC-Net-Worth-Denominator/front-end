@@ -10,6 +10,10 @@ const HeaderDiv = styled.div`
     width: 80%;
 `
 
+const PortfolioStyling = styled.div`
+    padding: 4% 0%;
+`
+
 const Portfolio = (props) => {
 
     const { push } = useHistory();
@@ -32,6 +36,7 @@ const Portfolio = (props) => {
 
     return(
         <div>
+            <PortfolioStyling>
             <HeaderDiv>
                 <h3>Remove Asset</h3>
                 <h1>View Portfolio</h1>
@@ -45,6 +50,7 @@ const Portfolio = (props) => {
                 <h2>Total Net Worth</h2>
                 <h2>6.55 BTC</h2>
             </section>
+            </PortfolioStyling>
         </div>
     )
 }
