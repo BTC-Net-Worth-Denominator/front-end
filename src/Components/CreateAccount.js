@@ -14,6 +14,10 @@ const HeaderDiv = styled.div`
     color: white;
 `
 
+const AccountStyling = styled.div`
+    padding: 10% 0%;
+`
+
 const initialMessage = ''
 
 const CreateAccount = () => {
@@ -49,6 +53,7 @@ const CreateAccount = () => {
 
     return(
         <div>
+            <AccountStyling>
             <HeaderDiv>
                 <center>
                     <h1>Create Account</h1>
@@ -79,6 +84,7 @@ const CreateAccount = () => {
                 <h4>Login Page</h4>
                 </Link>
             </center>
+            </AccountStyling>
         </div>
     )
 }

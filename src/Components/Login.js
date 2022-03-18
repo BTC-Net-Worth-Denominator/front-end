@@ -16,6 +16,10 @@ const HeaderDiv = styled.div`
     color: white;
 `
 
+const LoginStyling = styled.div`
+    padding: 10% 0%;
+`
+
 const Login = () => {
 
     const [ credentials, setCredentials ] = useState(initialCredentials);
@@ -45,6 +49,7 @@ const Login = () => {
 
     return(
             <div>
+                <LoginStyling>
                 <HeaderDiv>
                     <center>
                         <h1>Login</h1>
@@ -74,7 +79,8 @@ const Login = () => {
                 <Link to="/create-account" >
                 <h4>Create Account</h4>
                 </Link>
-            </center>        
+            </center>     
+            </LoginStyling>   
             </div>
     )
 }
