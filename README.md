@@ -12,37 +12,38 @@ I believe that in the future, Bitcoin will be the universal globally accepted fo
 
 [API (Heroku)](https://btc-net-worth.herokuapp.com/)
 
+[Backend Repo](https://github.com/BTC-Net-Worth-Denominator/back-end-core)
+
 ### Main Contributors
 
 [Peter Conley](https://github.com/peterdavidconley)
+[Brian Bellinger](https://github.com/bbellify)
 
 ## Design Specs
 
 The original front-end design can be found with this URL: https://www.canva.com/design/DAEzcWAX3CE/FSVAQBEJckm9dZaJyDv4cw/view?website#1
 
-## Screenshots
-
-
-
 ## Tech/framework used
 
-React
+Front-end: React
+Back-end: Node.js
 
-## Features
+## Theory
 
 This project is ahead of it's time, interms of common financial thinking. It's meant to change the way we think about money, by switching the base unit of account.
 
-## Project Installation
+## How to Use
 
-### `npm start`
+1. User creates account by visiting /create-account page and submitting an username and password
+2. User adds assets to their portfolio, one by one, on page /add-assets
+3. User assigns USD value to each asset on page /add-assets
+4. User can view entire portfolio denominated in BTC on portfolio page /portfolio
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Contribute
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Contribute to this project by submitting a pull request or submitting your information to this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdpodZtqpk_xZt77XGe2zGD0pjlc67T_6TwNAPHW54LIWGMXg/viewform?usp=sf_link)
 
-Changes will be applied, in real time, to the [Live Vercel Deployment](https://front-end-two-umber.vercel.app/). 
+
 
 # API Reference
 
@@ -258,18 +259,6 @@ _Server Response:_
     "message": "Deleted the asset ${asset name}."
 }
 ```
-
-
-## How to Use
-
-1. User creates account by visiting /create-account page and submitting an username and password
-2. User adds assets to their portfolio, one by one, on page /add-assets
-3. User assigns USD value to each asset on page /add-assets
-4. User can view entire portfolio denominated in BTC on portfolio page /portfolio
-
-## Contribute
-
-Contribute to this project by submitting a pull request or submitting your information to this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdpodZtqpk_xZt77XGe2zGD0pjlc67T_6TwNAPHW54LIWGMXg/viewform?usp=sf_link)
 
 ## License
 
