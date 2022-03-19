@@ -20,12 +20,14 @@ const NavStyling = {
     flexDirection: 'row',
     justifyContent: 'flex-end',
     alignSelf: 'center',
+    width: '50%',
     color: 'black'
  }
 
  const LogoStyling = {
      display: 'flex',
-     flexDirection: 'flex-start'
+     flexDirection: 'flex-start',
+     width: '50%',
  }
 
  const ButtonStyling = {
