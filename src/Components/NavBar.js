@@ -24,6 +24,12 @@ const NavStyling = {
     color: 'black'
  }
 
+ const LinkStyling = {
+    padding: '0% 8%',
+    color: 'black',
+    textDecoration: 'none',
+}
+
  const LogoStyling = {
      display: 'flex',
      flexDirection: 'flex-start',
@@ -33,10 +39,6 @@ const NavStyling = {
  const ButtonStyling = {
     backgroundColor: 'orange',
     padding: '2%',
- }
-
- const LinkStyling = {
-     padding: '0% 5%',
  }
  
 
