@@ -28,6 +28,7 @@ const NavStyling = {
     padding: '0% 8%',
     color: 'black',
     textDecoration: 'none',
+    fontSize: '20px',
 }
 
  const LogoStyling = {

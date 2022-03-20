@@ -12,10 +12,11 @@ const AssetField = styled.div`
 
 const HeaderStyling = styled.div`
     background-color: orange;
+    text-align: center;
     color: white;
     font-size: 20px;
-    width: 50%;
     padding: 1%;
+    margin: 0% 20%;
 `
 
 const AssetStyling = styled.div`
@@ -58,7 +59,7 @@ const AddAsset = () => {
     return(
         <AssetStyling>
             <HeaderStyling>
-                <center><h1>Add Assets</h1></center>
+                <center><h1>ADD ASSETS</h1></center>
             </HeaderStyling>
             <section>
             <div>
