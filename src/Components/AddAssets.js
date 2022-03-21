@@ -23,6 +23,13 @@ const AssetStyling = styled.div`
     padding: 4% 0%;
 `
 
+const ContentStyling = styled.div`
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10%;
+    padding-top: 5%;
+`
+
 const initialAsset = {
 
     assetName: '',
@@ -61,74 +68,74 @@ const AddAsset = () => {
             <HeaderStyling>
                 <center><h1>ADD ASSETS</h1></center>
             </HeaderStyling>
-            <section>
-            <div>
-                <h3>Enter in an asset, with its current corresponding fair market value to add it to your portfolio.</h3>
-            </div>
-            <AssetField>
-            <form onSubmit={handleSubmit}>
-                <label>Asset Name
-                    <input 
-                    type="text" 
-                    name="assetName" 
-                    id="assetName"
-                    onChange={handleChange}
-                    />
-                </label>
-                <label>Asset Value (USD)
-                    <input 
-                    type="text" 
-                    name="assetValue" 
-                    id="assetValue"
-                    onChange={handleChange}
-                    />
-                </label>
-                <button id='submit'>[+]</button>
-            </form>
-            </AssetField>
-            <AssetField>
-            <form onSubmit={handleSubmit}>
-                <label>Asset Name
-                    <input 
-                    type="text" 
-                    name="assetName" 
-                    id="assetName"
-                    onChange={handleChange}
-                    />
-                </label>
-                <label>Asset Value (USD)
-                    <input 
-                    type="text" 
-                    name="assetValue" 
-                    id="assetValue"
-                    onChange={handleChange}
-                    />
-                </label>
-                <button id='submit'>[+]</button>
-            </form>
-            </AssetField>
-            <AssetField>
-            <form onSubmit={handleSubmit}>
-                <label>Asset Name
-                    <input 
-                    type="text" 
-                    name="assetName" 
-                    id="assetName"
-                    onChange={handleChange}
-                    />
-                </label>
-                <label>Asset Value (USD)
-                    <input 
-                    type="text" 
-                    name="assetValue" 
-                    id="assetValue"
-                    onChange={handleChange}
-                    />
-                </label>
-                <button id='submit'>[+]</button>
-            </form>
-            </AssetField>
-            </section>
+            <ContentStyling>
+                <div>
+                    <h3>Enter in an asset, with its current corresponding fair market value to add it to your portfolio.</h3>
+                </div>
+                <AssetField>
+                <form onSubmit={handleSubmit}>
+                    <label>Asset Name
+                        <input 
+                        type="text" 
+                        name="assetName" 
+                        id="assetName"
+                        onChange={handleChange}
+                        />
+                    </label>
+                    <label>Asset Value (USD)
+                        <input 
+                        type="text" 
+                        name="assetValue" 
+                        id="assetValue"
+                        onChange={handleChange}
+                        />
+                    </label>
+                    <button id='submit'>[+]</button>
+                </form>
+                </AssetField>
+                <AssetField>
+                <form onSubmit={handleSubmit}>
+                    <label>Asset Name
+                        <input 
+                        type="text" 
+                        name="assetName" 
+                        id="assetName"
+                        onChange={handleChange}
+                        />
+                    </label>
+                    <label>Asset Value (USD)
+                        <input 
+                        type="text" 
+                        name="assetValue" 
+                        id="assetValue"
+                        onChange={handleChange}
+                        />
+                    </label>
+                    <button id='submit'>[+]</button>
+                </form>
+                </AssetField>
+                <AssetField>
+                <form onSubmit={handleSubmit}>
+                    <label>Asset Name
+                        <input 
+                        type="text" 
+                        name="assetName" 
+                        id="assetName"
+                        onChange={handleChange}
+                        />
+                    </label>
+                    <label>Asset Value (USD)
+                        <input 
+                        type="text" 
+                        name="assetValue" 
+                        id="assetValue"
+                        onChange={handleChange}
+                        />
+                    </label>
+                    <button id='submit'>[+]</button>
+                </form>
+                </AssetField>
+            </ContentStyling>
         </AssetStyling>
     )
 }
