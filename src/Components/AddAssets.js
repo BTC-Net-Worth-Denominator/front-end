@@ -8,6 +8,7 @@ const AssetField = styled.div`
     padding: 3%;
     display: flex;
     align-items: space-center;
+    width: 60%;
 `;
 
 const HeaderStyling = styled.div`
@@ -72,48 +73,6 @@ const AddAsset = () => {
                 <div>
                     <h3>Enter in an asset, with its current corresponding fair market value to add it to your portfolio.</h3>
                 </div>
-                <AssetField>
-                <form onSubmit={handleSubmit}>
-                    <label>Asset Name
-                        <input 
-                        type="text" 
-                        name="assetName" 
-                        id="assetName"
-                        onChange={handleChange}
-                        />
-                    </label>
-                    <label>Asset Value (USD)
-                        <input 
-                        type="text" 
-                        name="assetValue" 
-                        id="assetValue"
-                        onChange={handleChange}
-                        />
-                    </label>
-                    <button id='submit'>[+]</button>
-                </form>
-                </AssetField>
-                <AssetField>
-                <form onSubmit={handleSubmit}>
-                    <label>Asset Name
-                        <input 
-                        type="text" 
-                        name="assetName" 
-                        id="assetName"
-                        onChange={handleChange}
-                        />
-                    </label>
-                    <label>Asset Value (USD)
-                        <input 
-                        type="text" 
-                        name="assetValue" 
-                        id="assetValue"
-                        onChange={handleChange}
-                        />
-                    </label>
-                    <button id='submit'>[+]</button>
-                </form>
-                </AssetField>
                 <AssetField>
                 <form onSubmit={handleSubmit}>
                     <label>Asset Name
