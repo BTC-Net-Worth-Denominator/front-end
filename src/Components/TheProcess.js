@@ -16,7 +16,7 @@ const HeadingStyling = styled.div`
 `
 
 const ProcessStyling = styled.div`
-    padding: 2% 0%;
+    padding: 1% 0% 2%;
 `
 
 const NumberStyling = styled.div`

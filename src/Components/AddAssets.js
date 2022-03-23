@@ -7,8 +7,12 @@ import styled from 'styled-components';
 const AssetField = styled.div`
     padding: 3%;
     display: flex;
-    align-items: space-center;
+    align-items: center;
+    justify-content: center;
     width: 60%;
+    margin: 5%;
+    text-align: center;
+    font-size: 1.5rem;
 `;
 
 const HeaderStyling = styled.div`
@@ -29,6 +33,13 @@ const ContentStyling = styled.div`
     flex-direction: row;
     padding-bottom: 10%;
     padding-top: 5%;
+`
+
+const TextStyling = styled.div`
+
+    width: 30%;
+    font-size: 1.5rem;
+
 `
 
 const initialAsset = {
@@ -70,9 +81,9 @@ const AddAsset = () => {
                 <center><h1>ADD ASSETS</h1></center>
             </HeaderStyling>
             <ContentStyling>
-                <div>
+                <TextStyling>
                     <h3>Enter in an asset, with its current corresponding fair market value to add it to your portfolio.</h3>
-                </div>
+                </TextStyling>
                 <AssetField>
                 <form onSubmit={handleSubmit}>
                     <label>Asset Name
