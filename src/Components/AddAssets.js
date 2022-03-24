@@ -42,6 +42,12 @@ const TextStyling = styled.div`
 
 `
 
+const ButtonStyling = {
+    backgroundColor: 'orange',
+    padding: '2% 4%',
+    fontSize: '1.5rem'
+}
+
 const initialAsset = {
 
     assetName: '',
@@ -102,7 +108,7 @@ const AddAsset = () => {
                         onChange={handleChange}
                         />
                     </label>
-                    <button id='submit'>[+]</button>
+                        <button id='submit' style={ButtonStyling}>+</button>
                 </form>
                 </AssetField>
             </ContentStyling>
