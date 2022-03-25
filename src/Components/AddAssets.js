@@ -10,14 +10,16 @@ const AssetField = styled.div`
     align-items: center;
     justify-content: center;
     width: 60%;
-    margin: 5%;
+    margin: 0% 3%;
     text-align: center;
     font-size: 2rem;
+    border: white 2px solid;
 `;
 
 const FieldStyling = styled.div`
     display: flex;
     justify-content: space-between;
+    margin: 4% 0%;
 
 `
 
@@ -44,7 +46,7 @@ const ContentStyling = styled.div`
 const TextStyling = styled.div`
 
     width: 30%;
-    font-size: 1.5rem;
+    font-size: 2rem;
 
 `
 
@@ -99,7 +101,7 @@ const AddAsset = () => {
                 <AssetField>
                 <form onSubmit={handleSubmit}>
                     <FieldStyling>
-                        <label>Asset Name
+                        <label>Asset Name:  
                             <input 
                             type="text" 
                             name="assetName" 
@@ -109,7 +111,7 @@ const AddAsset = () => {
                         </label>
                     </FieldStyling>
                     <FieldStyling>
-                        <label>Asset Value (USD)
+                        <label>Asset Value (USD):  
                             <input 
                             type="text" 
                             name="assetValue" 
@@ -117,9 +119,8 @@ const AddAsset = () => {
                             onChange={handleChange}
                             />
                         </label>
-                        <button id='submit' style={ButtonStyling}>+</button>
                     </FieldStyling>
-                        
+                    <button id='submit' style={ButtonStyling}>Add Asset</button>
                 </form>
                 </AssetField>
             </ContentStyling>
