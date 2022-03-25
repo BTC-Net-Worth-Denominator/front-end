@@ -12,8 +12,14 @@ const AssetField = styled.div`
     width: 60%;
     margin: 5%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
 `;
+
+const FieldStyling = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+`
 
 const HeaderStyling = styled.div`
     background-color: orange;
@@ -44,7 +50,7 @@ const TextStyling = styled.div`
 
 const ButtonStyling = {
     backgroundColor: 'orange',
-    padding: '2% 4%',
+    padding: '0.5% 4%',
     fontSize: '1.5rem'
 }
 
@@ -92,23 +98,28 @@ const AddAsset = () => {
                 </TextStyling>
                 <AssetField>
                 <form onSubmit={handleSubmit}>
-                    <label>Asset Name
-                        <input 
-                        type="text" 
-                        name="assetName" 
-                        id="assetName"
-                        onChange={handleChange}
-                        />
-                    </label>
-                    <label>Asset Value (USD)
-                        <input 
-                        type="text" 
-                        name="assetValue" 
-                        id="assetValue"
-                        onChange={handleChange}
-                        />
-                    </label>
+                    <FieldStyling>
+                        <label>Asset Name
+                            <input 
+                            type="text" 
+                            name="assetName" 
+                            id="assetName"
+                            onChange={handleChange}
+                            />
+                        </label>
+                    </FieldStyling>
+                    <FieldStyling>
+                        <label>Asset Value (USD)
+                            <input 
+                            type="text" 
+                            name="assetValue" 
+                            id="assetValue"
+                            onChange={handleChange}
+                            />
+                        </label>
                         <button id='submit' style={ButtonStyling}>+</button>
+                    </FieldStyling>
+                        
                 </form>
                 </AssetField>
             </ContentStyling>
