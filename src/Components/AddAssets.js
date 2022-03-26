@@ -22,6 +22,8 @@ const FieldStyling = styled.div`
     margin: 4% 0%;
 
 `
+const FormFieldStyling = styled.div`
+ `
 
 const HeaderStyling = styled.div`
     background-color: orange;
@@ -101,23 +103,27 @@ const AddAsset = () => {
                 <AssetField>
                 <form onSubmit={handleSubmit}>
                     <FieldStyling>
-                        <label>Asset Name:  
+                        <label>Asset Name: 
+                            <FormFieldStyling>
                             <input 
                             type="text" 
                             name="assetName" 
                             id="assetName"
                             onChange={handleChange}
                             />
+                            </FormFieldStyling>
                         </label>
                     </FieldStyling>
                     <FieldStyling>
                         <label>Asset Value (USD):  
+                            <FormFieldStyling>
                             <input 
                             type="text" 
                             name="assetValue" 
                             id="assetValue"
                             onChange={handleChange}
                             />
+                            </FormFieldStyling>
                         </label>
                     </FieldStyling>
                     <button id='submit' style={ButtonStyling}>Add Asset</button>
