@@ -5,7 +5,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const AssetField = styled.div`
-    padding: 3%;
+    padding: 1%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,12 +17,12 @@ const AssetField = styled.div`
 `;
 
 const FieldStyling = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin: 4% 0%;
+   text-align: start;
 
 `
 const FormFieldStyling = styled.div`
+        margin: 0% 1%;
+        width: 100%;
  `
 
 const HeaderStyling = styled.div`
@@ -55,7 +55,8 @@ const TextStyling = styled.div`
 const ButtonStyling = {
     backgroundColor: 'orange',
     padding: '0.5% 4%',
-    fontSize: '1.5rem'
+    fontSize: '1.5rem',
+    margin: '4%',
 }
 
 const initialAsset = {
@@ -102,7 +103,7 @@ const AddAsset = () => {
                 </TextStyling>
                 <AssetField>
                 <form onSubmit={handleSubmit}>
-                    <FieldStyling>
+                   <FieldStyling>
                         <label>Asset Name: 
                             <FormFieldStyling>
                             <input 
@@ -114,6 +115,7 @@ const AddAsset = () => {
                             </FormFieldStyling>
                         </label>
                     </FieldStyling>
+                    
                     <FieldStyling>
                         <label>Asset Value (USD):  
                             <FormFieldStyling>
