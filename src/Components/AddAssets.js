@@ -22,7 +22,7 @@ const FieldStyling = styled.div`
 `
 const FormFieldStyling = styled.div`
         margin: 0% 1%;
-        width: 100%;
+        width: 300px;
  `
 
 const HeaderStyling = styled.div`
@@ -106,7 +106,7 @@ const AddAsset = () => {
                    <FieldStyling>
                         <label>Asset Name: 
                             <FormFieldStyling>
-                            <input 
+                            <input style={{ width: "300px" }}
                             type="text" 
                             name="assetName" 
                             id="assetName"
@@ -119,7 +119,7 @@ const AddAsset = () => {
                     <FieldStyling>
                         <label>Asset Value (USD):  
                             <FormFieldStyling>
-                            <input 
+                            <input style={{ width: "300px" }}
                             type="text" 
                             name="assetValue" 
                             id="assetValue"
