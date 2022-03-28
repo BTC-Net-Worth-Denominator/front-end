@@ -16,9 +16,39 @@ const HeaderDiv = styled.div`
     color: white;
 `
 
-const LoginStyling = styled.div`
-    padding: 10% 0%;
+const FooterStyling = styled.div`
+    margin-top: 10%;
 `
+
+const RowStyling = styled.div`
+   text-align: start;
+
+`
+const InputStyling = styled.div`
+        margin: 0% 1%;
+        width: 300px;
+ `
+
+const FormStyling = styled.div`
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0% 20%;
+    text-align: center;
+    font-size: 2rem;
+`
+
+const AccountStyling = styled.div`
+    padding: 5% 0%;
+`
+
+const ButtonStyling = {
+    backgroundColor: 'orange',
+    padding: '0.5% 4%',
+    fontSize: '1.5rem',
+    margin: '4%',
+}
 
 const Login = () => {
 
@@ -49,38 +79,50 @@ const Login = () => {
 
     return(
             <div>
-                <LoginStyling>
+                <AccountStyling>
                 <HeaderDiv>
                     <center>
                         <h1>Login</h1>
                     </center>
                 </HeaderDiv>
-            <form onSubmit={handleSubmit}>
-                <label>Username:
-                    <input 
-                    type="text" 
-                    name="username" 
-                    id="username"
-                    onChange={handleChange}
-                    />
-                </label>
-                <label>Password:
-                    <input 
-                    type="password" 
-                    name="password" 
-                    id="password"
-                    onChange={handleChange}
-                    />
-                </label>
-                <button id='submit'>Submit</button>
-            </form>
-            <center>
-                <h3>Not A Current User?</h3>    
-                <Link to="/create-account" >
-                <h4>Create Account</h4>
-                </Link>
-            </center>     
-            </LoginStyling>   
+                <FormStyling>
+                    <form onSubmit={handleSubmit}>
+                    <RowStyling>
+                    <label>Username:
+                        <InputStyling>
+                            <input style={{ width: "300px" }}
+                            type="text" 
+                            name="username" 
+                            id="username"
+                            onChange={handleChange}
+                            />
+                        </InputStyling>
+                    </label>
+                    </RowStyling>
+                    <RowStyling>
+                    <label>Password:
+                        <InputStyling>
+                            <input style={{ width: "300px" }}
+                            type="password" 
+                            name="password" 
+                            id="password"
+                            onChange={handleChange}
+                            />
+                        </InputStyling>
+                    </label>
+                    </RowStyling>
+                    <button id='submit' style={ButtonStyling}>Submit</button>
+                    </form>
+                    </FormStyling>
+                        <FooterStyling>
+                            <center>
+                            <h3>Not A Current User?</h3>    
+                            <Link to="/create-account" >
+                            <h4>Create Account</h4>
+                            </Link>
+                            </center>   
+                        </FooterStyling>  
+                </AccountStyling>  
             </div>
     )
 }
