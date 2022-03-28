@@ -11,8 +11,23 @@ const HeaderDiv = styled.div`
     color: white;
 `
 
+const VPStyling = styled.div`
+    background-color: orange;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 1% 15%;
+`
+
 const PortfolioStyling = styled.div`
-    padding: 4% 0%;
+    padding-top: 4%;
+    padding-bottom: 30%;
+`
+
+const TotalStyling = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `
 
 const Portfolio = (props) => {
@@ -40,7 +55,9 @@ const Portfolio = (props) => {
             <PortfolioStyling>
             <HeaderDiv>
                 <h2>Remove Asset</h2>
-                <h1>VIEW PORTFOLIO</h1>
+                <VPStyling>
+                    <h1>VIEW PORTFOLIO</h1>
+                </VPStyling>
                 <h1>⟳</h1>
             </HeaderDiv>
 
@@ -49,9 +66,11 @@ const Portfolio = (props) => {
             </section>   
             
             <section>
-                <h2 onClick={handleDelete}>X</h2>
-                <h2>Total Net Worth</h2>
-                <h2>6.55 BTC</h2>
+                <TotalStyling>
+                    <h2 onClick={handleDelete}>X</h2>
+                    <h2>Total Net Worth</h2>
+                    <h2>6.55 BTC</h2>
+                </TotalStyling>
             </section>
             </PortfolioStyling>
         </div>

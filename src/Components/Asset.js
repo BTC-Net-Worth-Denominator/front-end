@@ -5,6 +5,7 @@ const AssetStyling = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 5% 0%;
 `
 
 const Asset = () => {
