@@ -6,8 +6,9 @@ import axiosWithAuth from '../Utils/axiosWithAuth';
 
 const HeaderDiv = styled.div`
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: white;
-    width: 80%;
 `
 
 const PortfolioStyling = styled.div`
@@ -38,8 +39,8 @@ const Portfolio = (props) => {
         <div>
             <PortfolioStyling>
             <HeaderDiv>
-                <h3>Remove Asset</h3>
-                <h1>View Portfolio</h1>
+                <h2>Remove Asset</h2>
+                <h1>VIEW PORTFOLIO</h1>
                 <h1>⟳</h1>
             </HeaderDiv>
             <section>
