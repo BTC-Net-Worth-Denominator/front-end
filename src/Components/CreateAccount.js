@@ -14,14 +14,27 @@ const HeaderDiv = styled.div`
     color: white;
 `
 
+const FooterStyling = styled.div`
+    margin-top: 10%;
+`
+
 const RowStyling = styled.div`
    text-align: start;
 
 `
+const InputStyling = styled.div`
+        margin: 0% 1%;
+        width: 300px;
+ `
 
 const FormStyling = styled.div`
-    padding: 4% 0%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0% 20%;
     text-align: center;
+    font-size: 2rem;
 `
 
 const AccountStyling = styled.div`
@@ -79,32 +92,38 @@ const CreateAccount = () => {
                 <form onSubmit={handleSubmit}>
                     <RowStyling>
                     <label>Enter Username:
-                        <input 
-                        type="text" 
-                        name="username" 
-                        id="username"
-                        onChange={handleChange}
-                        />
+                        <InputStyling>
+                            <input style={{ width: "300px" }}
+                            type="text" 
+                            name="username" 
+                            id="username"
+                            onChange={handleChange}
+                            />
+                        </InputStyling>
                     </label>
                     </RowStyling>
                     <RowStyling>
                     <label>Create Password:
-                        <input 
-                        type="password" 
-                        name="password" 
-                        id="password"
-                        onChange={handleChange}
-                        />
+                        <InputStyling>
+                            <input style={{ width: "300px" }}
+                            type="password" 
+                            name="password" 
+                            id="password"
+                            onChange={handleChange}
+                            />
+                        </InputStyling>
                     </label>
                     </RowStyling>
                     <button id='submit' style={ButtonStyling}>Submit</button>
                 </form>
             </FormStyling>
             <center>
-                <h3>Already A User?</h3>    
-                <Link to="/login" >
-                <h4>Login Page</h4>
-                </Link>
+                <FooterStyling>
+                    <h3>Already A User?</h3>    
+                    <Link to="/login" >
+                    <h4>Login Page</h4>
+                    </Link>
+                </FooterStyling>
             </center>
             </AccountStyling>
         </div>
