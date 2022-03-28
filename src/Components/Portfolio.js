@@ -67,7 +67,6 @@ const Portfolio = (props) => {
             
             <section>
                 <TotalStyling>
-                    <h2 onClick={handleDelete}>X</h2>
                     <h2>Total Net Worth</h2>
                     <h2>6.55 BTC</h2>
                 </TotalStyling>
