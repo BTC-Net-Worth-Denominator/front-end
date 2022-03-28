@@ -14,9 +14,25 @@ const HeaderDiv = styled.div`
     color: white;
 `
 
+const RowStyling = styled.div`
+   text-align: start;
+
+`
+
+const FormStyling = styled.div`
+    padding: 4% 0%;
+    text-align: center;
+`
+
 const AccountStyling = styled.div`
     padding: 10% 0%;
 `
+const ButtonStyling = {
+    backgroundColor: 'orange',
+    padding: '0.5% 4%',
+    fontSize: '1.5rem',
+    margin: '4%',
+}
 
 const initialMessage = ''
 
@@ -59,25 +75,31 @@ const CreateAccount = () => {
                     <h1>Create Account</h1>
                 </center>
             </HeaderDiv>
-            <form onSubmit={handleSubmit}>
-                <label>Enter Username:
-                    <input 
-                    type="text" 
-                    name="username" 
-                    id="username"
-                    onChange={handleChange}
-                    />
-                </label>
-                <label>Create Password:
-                    <input 
-                    type="password" 
-                    name="password" 
-                    id="password"
-                    onChange={handleChange}
-                    />
-                </label>
-                <button id='submit'>Submit</button>
-            </form>
+            <FormStyling>
+                <form onSubmit={handleSubmit}>
+                    <RowStyling>
+                    <label>Enter Username:
+                        <input 
+                        type="text" 
+                        name="username" 
+                        id="username"
+                        onChange={handleChange}
+                        />
+                    </label>
+                    </RowStyling>
+                    <RowStyling>
+                    <label>Create Password:
+                        <input 
+                        type="password" 
+                        name="password" 
+                        id="password"
+                        onChange={handleChange}
+                        />
+                    </label>
+                    </RowStyling>
+                    <button id='submit' style={ButtonStyling}>Submit</button>
+                </form>
+            </FormStyling>
             <center>
                 <h3>Already A User?</h3>    
                 <Link to="/login" >
