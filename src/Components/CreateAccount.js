@@ -38,7 +38,7 @@ const FormStyling = styled.div`
 `
 
 const AccountStyling = styled.div`
-    padding: 10% 0%;
+    padding: 5% 0%;
 `
 const ButtonStyling = {
     backgroundColor: 'orange',
