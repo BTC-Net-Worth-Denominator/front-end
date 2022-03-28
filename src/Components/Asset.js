@@ -1,13 +1,21 @@
 import React from 'react';
+import styled from 'styled-components'
+
+const AssetStyling = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
 
 const Asset = () => {
 
     return(
         <div>
-            <h2>[ X ]</h2>
-            <img></img>
-            <h2> Asset </h2>
-            <h2> 4.12 BTC</h2>
+            <AssetStyling>
+                <h2>[ X ]</h2>
+                <h2> Asset </h2>
+                <h2> 4.12 BTC</h2>
+            </AssetStyling>
         </div>
     )
 }

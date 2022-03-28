@@ -43,9 +43,11 @@ const Portfolio = (props) => {
                 <h1>VIEW PORTFOLIO</h1>
                 <h1>⟳</h1>
             </HeaderDiv>
+
             <section>
                 <Asset />
-            </section>
+            </section>   
+            
             <section>
                 <h2 onClick={handleDelete}>X</h2>
                 <h2>Total Net Worth</h2>
