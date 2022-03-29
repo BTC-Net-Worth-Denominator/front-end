@@ -68,7 +68,7 @@ const Login = () => {
 
         axios.post(`https://btc-net-worth.herokuapp.com/api/auth/login`, credentials)
         .then(resp => {
-            console.log(resp)
+            console.log(resp.data.message)
         })
         .catch(err => {
             console.log(err)
