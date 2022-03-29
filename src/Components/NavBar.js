@@ -25,10 +25,11 @@ const NavStyling = {
  }
 
  const LinkStyling = {
-    padding: '0% 8%',
+    padding: '0% 6%',
     color: 'black',
     textDecoration: 'none',
     fontSize: '20px',
+    whiteSpace: 'nowrap'
 
 }
 
