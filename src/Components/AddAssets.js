@@ -83,13 +83,14 @@ const AddAsset = () => {
 
         e.preventDefault();
 
-        axios.post(``, assets)
-            .then(resp => {
-                console.log(resp)
-            })
-            .catch(err => {
-                console.log(err)
-            }) 
+        axios.post(`https://btc-net-worth.herokuapp.com/api/assets`, assets)
+        .then(resp => {
+            console.log(resp)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+
     }
 
     return(
