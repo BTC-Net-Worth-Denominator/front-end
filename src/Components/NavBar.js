@@ -29,6 +29,7 @@ const NavStyling = {
     color: 'black',
     textDecoration: 'none',
     fontSize: '20px',
+
 }
 
  const LogoStyling = {
@@ -55,7 +56,7 @@ const NavBar = () => {
                 </Link>
             </div>
             <div style={NavLinkStyling}>
-                    <Link to='/process' style={LinkStyling}>The Process</Link>
+                    <Link to='/process' style={LinkStyling}>Process</Link>
                 <br />
                     <Link to='/add-assets' style={LinkStyling}>Add Assets</Link>
                 <br />

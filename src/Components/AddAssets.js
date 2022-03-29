@@ -61,8 +61,9 @@ const ButtonStyling = {
 
 const initialAsset = {
 
-    assetName: '',
-    assetValue: 0,
+    asset_name: '',
+    asset_price: 0,
+    user_id: 0
 
 }
 
