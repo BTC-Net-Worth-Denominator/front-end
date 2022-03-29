@@ -4,11 +4,6 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
 
-const initialCredentials = {
-    username: '',
-    password: '',
-}
-
 const HeaderDiv = styled.div`
     font-size: 30px;
     color: white;
@@ -49,6 +44,11 @@ const ButtonStyling = {
 
 const initialMessage = ''
 
+const initialCredentials = {
+    username: '',
+    password: '',
+}
+
 const CreateAccount = () => {
 
     const [ credentials, setCredentials ] = useState(initialCredentials);
@@ -65,20 +65,16 @@ const CreateAccount = () => {
 
         e.preventDefault();
 
-        // axios.post(``, credentials)
-        // .then(resp => {
-        //     console.log(resp)
-        //     setLoginMessage(resp.data.message)
-        // })
-        // .catch(err => {
-        //     console.log(err)
-        // })
+        axios.post(`https://btc-net-worth.herokuapp.com/api/auth/register`, credentials)
+        .then(resp => {
+            console.log(resp)
+        })
+        .catch(err => {
+            console.log(err)
+        })
 
     }
 
-    // Add in error messages:
-    // 1. Username already taken
-    // 2. Password too short
 
     return(
         <div>
