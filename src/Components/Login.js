@@ -66,14 +66,13 @@ const Login = () => {
 
         e.preventDefault();
 
-        // axios.post(`https://btc-net-worth.herokuapp.com/api/auth/login`, credentials)
-        // .then(resp => {
-        //     console.log(resp)
-        //     setLoginMessage(resp.data.message)
-        // })
-        // .catch(err => {
-        //     console.log(err)
-        // })
+        axios.post(`https://btc-net-worth.herokuapp.com/api/auth/login`, credentials)
+        .then(resp => {
+            console.log(resp)
+        })
+        .catch(err => {
+            console.log(err)
+        })
 
     }
 
