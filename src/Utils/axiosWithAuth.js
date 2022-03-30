@@ -9,7 +9,7 @@ const axiosWithAuth = () => {
             authorization: token,
             user_id: user_id,
         },
-        baseURL: 'https://potluckplan.herokuapp.com/api'
+        baseURL: 'https://btc-net-worth.herokuapp.com/api'
     })
 }
 
