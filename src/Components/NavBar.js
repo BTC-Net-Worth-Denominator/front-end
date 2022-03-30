@@ -1,7 +1,8 @@
 // Imports
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components'
+import { useHistory } from 'react-router-dom';
+
 
 // *** Styling ***
 
@@ -44,10 +45,19 @@ const NavStyling = {
     padding: '2%',
  }
  
+ 
 
 // *** Component ***
 
 const NavBar = () => {
+
+    const { push } = useHistory();
+
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        push('/login')
+    }
 
     return (
         <div style={NavStyling}>
@@ -67,7 +77,7 @@ const NavBar = () => {
                 <br />
                     <Link to='/login' style={LinkStyling}>Login</Link>
                 <br />
-                    <button style={ButtonStyling}>Logout</button>
+                    <button onClick={handleLogout} style={ButtonStyling}>Logout</button>
             </div>
         </div>
     )
