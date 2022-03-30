@@ -83,7 +83,7 @@ const Portfolio = (props) => {
                 <Asset />
                 {assets.map( asset => {
 					return(
-					<Asset/>)
+					<Asset name={assets.asset_name} price={assets.asset_price}/>)
 				})}
             </section>   
             

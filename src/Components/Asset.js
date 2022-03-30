@@ -8,14 +8,18 @@ const AssetStyling = styled.div`
     margin: 5% 0%;
 `
 
-const Asset = () => {
+const Asset = (props) => {
+
+    const { name, price } = props
+    console.log(name)
+    console.log(price)
 
     return(
         <div>
             <AssetStyling>
                 <h2>[ X ]</h2>
-                <h2> Asset </h2>
-                <h2> 4.12 BTC</h2>
+                <h2> {/* assets.asset_name */} Asset Name</h2>
+                <h2> {/* assets.asset_price */} BTC</h2>
             </AssetStyling>
         </div>
     )
