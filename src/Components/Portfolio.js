@@ -1,8 +1,10 @@
-import React from 'react';
 import Asset from './Asset'
 import styled from 'styled-components';
 import { useHistory, useParams } from 'react-router-dom';
 import axiosWithAuth from '../Utils/axiosWithAuth';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 
 const HeaderDiv = styled.div`
     display: flex;
@@ -30,12 +32,28 @@ const TotalStyling = styled.div`
     align-items: center;
 `
 
+const initialAssets = []
+
 const Portfolio = (props) => {
+
+    const [assets, setAssets] = useState(initialAssets)
 
     const { push } = useHistory();
 
     // const user_id = useParams();
 	// const { portfolio } = props;
+
+    useEffect(() => {
+		axios
+			.get('https://btc-net-worth.herokuapp.com/api/assets')
+			.then((res) => {
+				console.log(res.data);
+				setAssets(res.data);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	}, []);
 
     const handleDelete = () => {
 
@@ -63,6 +81,10 @@ const Portfolio = (props) => {
 
             <section>
                 <Asset />
+                {assets.map( asset => {
+					return(
+					<Asset/>)
+				})}
             </section>   
             
             <section>
