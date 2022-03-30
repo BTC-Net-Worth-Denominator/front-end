@@ -54,6 +54,7 @@ const Login = () => {
 
     const [ credentials, setCredentials ] = useState(initialCredentials);
     const [ loginMessage, setLoginMessage ] = useState(initialMessage);
+    const { push } = useHistory();
 
     const handleChange = (e) => {
         setCredentials({
@@ -68,7 +69,11 @@ const Login = () => {
 
         axios.post(`https://btc-net-worth.herokuapp.com/api/auth/login`, credentials)
         .then(resp => {
-            console.log(resp.data.message)
+            const { token, message, user_id } = resp.data
+            localStorage.setItem('token', token);
+            localStorage.setItem('message', message);
+            localStorage.setItem('user_id', user_id);
+            push('/process')
         })
         .catch(err => {
             console.log(err)
