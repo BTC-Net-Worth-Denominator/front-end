@@ -33,10 +33,12 @@ const TotalStyling = styled.div`
 `
 
 const initialAssets = []
+const initialNetWorth = 0
 
 const Portfolio = () => {
 
     const [assets, setAssets] = useState(initialAssets)
+    const [totalNW, setTotalNW] = useState(initialNetWorth)
 
     useEffect(() => {
 		axios
