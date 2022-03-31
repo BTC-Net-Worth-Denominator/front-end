@@ -28,7 +28,7 @@ const Asset = (props) => {
     return(
         <div >
             <AssetStyling>
-                <h2 onClick={handleDelete}>[ X ]</h2>
+                <h2>[ X ]</h2>
                 <h2> {/* asset.asset_name */} Asset Name</h2>
                 <h2> {/* assets.asset_price */} BTC</h2>
             </AssetStyling>
