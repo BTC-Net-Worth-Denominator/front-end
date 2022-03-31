@@ -54,6 +54,8 @@ const CreateAccount = () => {
     const [ credentials, setCredentials ] = useState(initialCredentials);
     const [ loginMessage, setLoginMessage ] = useState(initialMessage);
 
+    const { push } = useHistory()
+
     const handleChange = (e) => {
         setCredentials({
             ...credentials,
@@ -67,7 +69,8 @@ const CreateAccount = () => {
 
         axios.post(`https://btc-net-worth.herokuapp.com/api/auth/register`, credentials)
         .then(resp => {
-            console.log(resp.data.message)
+            setLoginMessage(resp.data.message)
+            push('/login')
         })
         .catch(err => {
             console.log(err)

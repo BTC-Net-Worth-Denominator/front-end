@@ -47,7 +47,6 @@ const Portfolio = (props) => {
 		axios
 			.get('https://btc-net-worth.herokuapp.com/api/assets')
 			.then((res) => {
-				console.log(res.data);
 				setAssets(res.data);
 			})
 			.catch((err) => {
@@ -80,10 +79,9 @@ const Portfolio = (props) => {
             </HeaderDiv>
 
             <section>
-                <Asset />
                 {assets.map( asset => {
 					return(
-					<Asset name={assets.asset_name} price={assets.asset_price}/>)
+					<Asset asset={asset} />)
 				})}
             </section>   
             

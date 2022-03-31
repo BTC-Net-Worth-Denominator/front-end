@@ -10,15 +10,13 @@ const AssetStyling = styled.div`
 
 const Asset = (props) => {
 
-    const { name, price } = props
-    console.log(name)
-    console.log(price)
+    const { asset } = props
 
     return(
-        <div>
+        <div >
             <AssetStyling>
                 <h2>[ X ]</h2>
-                <h2> {/* assets.asset_name */} Asset Name</h2>
+                <h2> {/* asset.asset_name */} Asset Name</h2>
                 <h2> {/* assets.asset_price */} BTC</h2>
             </AssetStyling>
         </div>
