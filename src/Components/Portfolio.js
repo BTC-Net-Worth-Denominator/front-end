@@ -34,14 +34,9 @@ const TotalStyling = styled.div`
 
 const initialAssets = []
 
-const Portfolio = (props) => {
+const Portfolio = () => {
 
     const [assets, setAssets] = useState(initialAssets)
-
-    const { push } = useHistory();
-
-    // const user_id = useParams();
-	// const { portfolio } = props;
 
     useEffect(() => {
 		axios
@@ -50,22 +45,11 @@ const Portfolio = (props) => {
 				setAssets(res.data);
 			})
 			.catch((err) => {
-				console.log(err);
+				console.log(`The error is: ${err}` );
 			});
 	}, []);
 
-    const handleDelete = () => {
-
-		// axiosWithAuth()
-		// .delete(``)
-		// .then( resp => {
-		// 	push(`/`)
-		// })
-		// .catch( err => {
-		// 	console.log(err)
-		// })
-
-	}
+    console.log(assets)
 
     return(
         <div>
