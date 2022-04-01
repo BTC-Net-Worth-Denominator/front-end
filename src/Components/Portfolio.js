@@ -53,6 +53,10 @@ const Portfolio = () => {
 
     console.log(assets)
 
+    const handleRefresh = () => {
+        window.location.reload()    
+    }
+
     return(
         <div>
             <PortfolioStyling>
@@ -61,7 +65,7 @@ const Portfolio = () => {
                 <VPStyling>
                     <h1>VIEW PORTFOLIO</h1>
                 </VPStyling>
-                <h1>⟳</h1>
+                <h1 onClick={handleRefresh}>⟳</h1>
             </HeaderDiv>
 
             <section>
