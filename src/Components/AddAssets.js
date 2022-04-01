@@ -110,8 +110,8 @@ const AddAsset = () => {
                             <FormFieldStyling>
                             <input style={{ width: "300px" }}
                             type="text" 
-                            name="assetName" 
-                            id="assetName"
+                            name="asset_name" 
+                            id="asset_name"
                             onChange={handleChange}
                             />
                             </FormFieldStyling>
@@ -123,8 +123,8 @@ const AddAsset = () => {
                             <FormFieldStyling>
                             <input style={{ width: "300px" }}
                             type="text" 
-                            name="assetValue" 
-                            id="assetValue"
+                            name="asset_value" 
+                            id="asset_value"
                             onChange={handleChange}
                             />
                             </FormFieldStyling>
