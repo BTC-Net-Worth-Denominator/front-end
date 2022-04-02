@@ -62,7 +62,7 @@ const ButtonStyling = {
 const initialAsset = {
 
     asset_name: '',
-    asset_price: 0,
+    asset_value: 0,
     user_id: 0
 
 }
@@ -86,6 +86,7 @@ const AddAsset = () => {
 
         axios.post(`https://btc-net-worth.herokuapp.com/api/assets`, assets)
         .then(resp => {
+            console.log(assets)
             console.log(resp)
         })
         .catch(err => {
@@ -93,6 +94,7 @@ const AddAsset = () => {
         })
 
     }
+    console.log(assets)
 
     return(
         <AssetStyling>
