@@ -33,7 +33,7 @@ const TotalStyling = styled.div`
 `
 
 const initialAssets = []
-const initialNetWorth = 0
+const initialNetWorth = 0.00
 
 const Portfolio = () => {
 
@@ -61,6 +61,8 @@ const Portfolio = () => {
         window.location.reload()    
     }
 
+    // setTotalNW( /* assets.filter() */)
+
     return(
         <div>
             <PortfolioStyling>
@@ -74,15 +76,17 @@ const Portfolio = () => {
 
             <section>
                 {assets.map( asset => {
+                    if(asset.user_id === localStorage.user_id){
 					return(
 					<Asset asset={asset} />)
+                    }
 				})}
             </section>   
             
             <section>
                 <TotalStyling>
                     <h2>Total Net Worth</h2>
-                    <h2>6.55 BTC</h2>
+                    <h2>{totalNW} BTC</h2>
                 </TotalStyling>
             </section>
             </PortfolioStyling>
