@@ -77,8 +77,11 @@ const AddAsset = () => {
         setAssets({
             ...assets,
             [e.target.name]: e.target.value,
+            ['user_id']: localStorage.user_id
         })
     }
+
+    console.log(localStorage.user_id)
 
     const handleSubmit = (e) => {
 
@@ -87,7 +90,6 @@ const AddAsset = () => {
         axios.post(`https://btc-net-worth.herokuapp.com/api/assets`, assets)
         .then(resp => {
             console.log(assets)
-            console.log(resp)
         })
         .catch(err => {
             console.log(err)
