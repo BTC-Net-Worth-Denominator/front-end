@@ -4,11 +4,6 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
 
-const initialCredentials = {
-    username: '',
-    password: '',
-}
-
 const initialMessage = ''
 
 const HeaderDiv = styled.div`
@@ -50,6 +45,11 @@ const ButtonStyling = {
     margin: '4%',
 }
 
+const initialCredentials = {
+    username: '',
+    password: '',
+}
+
 const Login = () => {
 
     const [ credentials, setCredentials ] = useState(initialCredentials);
@@ -70,6 +70,7 @@ const Login = () => {
         axios.post(`https://btc-net-worth.herokuapp.com/api/auth/login`, credentials)
         .then(resp => {
             const { token, message, user_id } = resp.data
+            console.log(resp.data)
             localStorage.setItem('token', token);
             localStorage.setItem('message', message);
             localStorage.setItem('user_id', user_id);
