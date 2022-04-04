@@ -41,14 +41,18 @@ const Portfolio = () => {
     const [totalNW, setTotalNW] = useState(initialNetWorth)
 
     useEffect(() => {
+        // setInterval(() => {
 		axios
 			.get('https://btc-net-worth.herokuapp.com/api/assets')
 			.then((res) => {
+                setInterval(() => {
 				setAssets(res.data);
+                }, 3000)
 			})
 			.catch((err) => {
 				console.log(`The error is: ${err}` );
 			});
+        // }, 3000)
 	}, []);
 
     console.log(assets)

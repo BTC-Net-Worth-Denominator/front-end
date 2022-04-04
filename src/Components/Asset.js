@@ -24,7 +24,7 @@ const Asset = (props) => {
             console.log(err)
         })
     }
-
+    console.log(asset.asset_name)
     return(
         <div >
             <AssetStyling>
