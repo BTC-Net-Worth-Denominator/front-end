@@ -58,7 +58,7 @@ const NavBar = () => {
         localStorage.removeItem('token');
         push('/login')
     }
-
+    console.log(localStorage)
     return (
         <div style={NavStyling}>
             <div style={LogoStyling}>
@@ -69,9 +69,13 @@ const NavBar = () => {
             <div style={NavLinkStyling}>
                     <Link to='/process' style={LinkStyling}>Process</Link>
                 <br />
+                {localStorage.user_id !== undefined &&
                     <Link to='/add-assets' style={LinkStyling}>Add Assets</Link>
+                }
                 <br />
+                {localStorage.user_id !== undefined &&
                     <Link to='/portfolio' style={LinkStyling}>View Portfolio</Link>
+                }
                 <br />
                     <Link to='/create-account' style={LinkStyling}>Create Account</Link>
                 <br />
