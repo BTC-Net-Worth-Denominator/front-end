@@ -49,7 +49,7 @@ const Portfolio = () => {
 			.then((res) => {
                 setInterval(() => {
 				setAssets(res.data);
-                }, 3000)
+                }, 1000)
 			})
 			.catch((err) => {
 				console.log(`The error is: ${err}` );

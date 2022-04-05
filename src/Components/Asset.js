@@ -16,9 +16,10 @@ const Asset = (props) => {
 
     const handleDelete = () => {
         axiosWithAuth()
-        .delete(`/asset/${asset.asset_id}`)
+        .delete(`/assets/${asset.asset_id}`)
         .then(resp => {
             console.log(resp)
+            window.location.reload()
         })
         .catch(err => {
             console.log(err)

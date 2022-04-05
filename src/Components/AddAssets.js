@@ -90,6 +90,7 @@ const AddAsset = () => {
         axios.post(`https://btc-net-worth.herokuapp.com/api/assets`, assets)
         .then(resp => {
             console.log(assets)
+            document.getElementById("asset_form").reset();
         })
         .catch(err => {
             console.log(err)
@@ -108,7 +109,7 @@ const AddAsset = () => {
                     <h3>Enter in an asset, with its current corresponding fair market value to add it to your portfolio.</h3>
                 </TextStyling>
                 <AssetField>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} id='asset_form'>
                    <FieldStyling>
                         <label>Asset Name: 
                             <FormFieldStyling>
