@@ -8,6 +8,8 @@ const AssetStyling = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 5% 0%;
+    padding: 1%;
+    border: 4px white solid;
 `
 
 const ButtonStyling = {
