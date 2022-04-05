@@ -1,7 +1,7 @@
-import React from 'react';
 import styled from 'styled-components'
 import axiosWithAuth from '../Utils/axiosWithAuth';
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const AssetStyling = styled.div`
     display: flex;
@@ -17,7 +17,12 @@ const ButtonStyling = {
     padding: '0.5%',
  }
 
+ const initialPrice = 0
+
 const Asset = (props) => {
+
+    const [ currentPrice, setCurrentPrice ] = useState(initialPrice)
+
 
     const { asset } = props
 
@@ -32,13 +37,21 @@ const Asset = (props) => {
             console.log(err)
         })
     }
+
+    axios.get(`https://api.coindesk.com/v1/bpi/currentprice.json`)
+    .then(resp => {
+        setCurrentPrice(resp.data.bpi.USD.rate)
+    })
+    .catch(err => {
+        console.log(err)
+    })
     
     return(
         <div >
             <AssetStyling>
                 <button onClick={handleDelete} style={ButtonStyling}>Delete</button>
                 <h2> {asset.asset_name}</h2>
-                <h2> {asset.asset_price} BTC</h2>
+                <h2> {asset.asset_price * (1/currentPrice)} BTC</h2>
             </AssetStyling>
         </div>
     )

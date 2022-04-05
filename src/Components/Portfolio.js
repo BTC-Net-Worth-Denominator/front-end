@@ -100,7 +100,7 @@ const Portfolio = () => {
             <section>
                 <TotalStyling>
                     <h2>Total Net Worth</h2>
-                    <h2>{totalNW} BTC</h2>
+                    <h2>{btcPrice} BTC</h2>
                 </TotalStyling>
             </section>
             </PortfolioStyling>
