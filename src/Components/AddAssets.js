@@ -62,7 +62,7 @@ const ButtonStyling = {
 const initialAsset = {
 
     asset_name: '',
-    asset_value: 0,
+    asset_price: 0,
     user_id: 0
 
 }
@@ -127,8 +127,8 @@ const AddAsset = () => {
                             <FormFieldStyling>
                             <input style={{ width: "300px" }}
                             type="text" 
-                            name="asset_value" 
-                            id="asset_value"
+                            name="asset_price" 
+                            id="asset_price"
                             onChange={handleChange}
                             />
                             </FormFieldStyling>

@@ -34,11 +34,13 @@ const TotalStyling = styled.div`
 
 const initialAssets = []
 const initialNetWorth = 0.00
+const initialPrice = 0
 
 const Portfolio = () => {
 
     const [assets, setAssets] = useState(initialAssets)
     const [totalNW, setTotalNW] = useState(initialNetWorth)
+    const [ btcPrice, setBTCPrice ] = useState(initialPrice)
 
     useEffect(() => {
         
@@ -55,13 +57,26 @@ const Portfolio = () => {
         
 	}, []);
 
-    console.log(assets)
 
     const handleRefresh = () => {
         window.location.reload()    
     }
 
-    // setTotalNW( /* assets.filter() */)
+    axios.get(`https://api.coindesk.com/v1/bpi/currentprice.json`)
+    .then(resp => {
+        setBTCPrice(resp.data.bpi.USD.rate)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+    console.log(btcPrice)    
+
+    // const currentUserAssets = setInterval(() => {
+    //     assets.filter( asset => asset.user_id === localStorage.user_id)
+    // }, 3000)
+
+    // console.log(`Current user assets: ${currentUserAssets}`)
 
     return(
         <div>
@@ -76,10 +91,9 @@ const Portfolio = () => {
 
             <section>
                 {assets.map( asset => {
-                    if(asset.user_id === localStorage.user_id){
 					return(
 					<Asset asset={asset} />)
-                    }
+                    
 				})}
             </section>   
             
