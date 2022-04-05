@@ -10,6 +10,11 @@ const AssetStyling = styled.div`
     margin: 5% 0%;
 `
 
+const ButtonStyling = {
+    backgroundColor: 'orange',
+    padding: '0.5%',
+ }
+
 const Asset = (props) => {
 
     const { asset } = props
@@ -29,9 +34,9 @@ const Asset = (props) => {
     return(
         <div >
             <AssetStyling>
-                <h2 onClick={handleDelete}>[ X ]</h2>
+                <button onClick={handleDelete} style={ButtonStyling}>Delete</button>
                 <h2> {asset.asset_name}</h2>
-                <h2> {asset.asset_price}</h2>
+                <h2> {asset.asset_price} BTC</h2>
             </AssetStyling>
         </div>
     )
