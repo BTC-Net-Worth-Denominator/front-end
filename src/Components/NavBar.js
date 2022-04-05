@@ -56,6 +56,8 @@ const NavBar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('message');
+        localStorage.removeItem('user_id');
         push('/login')
     }
     console.log(localStorage)

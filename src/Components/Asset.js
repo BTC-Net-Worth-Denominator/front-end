@@ -40,7 +40,7 @@ const Asset = (props) => {
 
     axios.get(`https://api.coindesk.com/v1/bpi/currentprice.json`)
     .then(resp => {
-        setCurrentPrice(resp.data.bpi.USD.rate)
+        setCurrentPrice(parseInt(resp.data.bpi.USD.rate))
     })
     .catch(err => {
         console.log(err)
