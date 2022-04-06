@@ -71,14 +71,10 @@ const Portfolio = () => {
     })
 
     // Map over assets, filter out for assets owned by logged in user only, add the total asset_value to totalNW variable
-
-    assets.map(asset => {
-        if (asset.user_id === localStorage.user_id) {
-            totalNW += asset.asset_value
-        }
-    })
-
-    console.log(totalNW)
+    
+    console.log(assets)
+    const userAssets = assets.filter( asset => asset.user_id === localStorage.user_id )
+    console.log(userAssets)
 
     // console.log(`Current user assets: ${currentUserAssets}`)
 
@@ -94,10 +90,11 @@ const Portfolio = () => {
             </HeaderDiv>
 
             <section>
-                {assets.map( asset => {
+                {assets.map(asset => {
+
 					return(
 					<Asset asset={asset} />)
-                    
+
 				})}
             </section>   
             
