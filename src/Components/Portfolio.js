@@ -33,52 +33,63 @@ const TotalStyling = styled.div`
 `
 
 const initialAssets = []
-const initialNetWorth = 0.00
+const initialUserAssets = []
 const initialPrice = 0
 
 const Portfolio = () => {
 
     const [assets, setAssets] = useState(initialAssets)
-    const [ btcPrice, setBTCPrice ] = useState(initialPrice)
+    const [userAssets, setUserAssets] = useState(initialUserAssets)
+    const [btcPrice, setBTCPrice] = useState(initialPrice)
     let totalNW = 0
 
     useEffect(() => {
+
+        const pricePromise = axios.get(`https://api.coindesk.com/v1/bpi/currentprice.json`)
         
-		axios
-			.get('https://btc-net-worth.herokuapp.com/api/assets')
-			.then((res) => {
-				setAssets(res.data);
-			})
+        .catch(err => {
+            console.log(err)
+        })
+
+		const assetPromise = axios.get('https://btc-net-worth.herokuapp.com/api/assets')
+			
 			.catch((err) => {
 				console.log(`The error is: ${err}` );
 			});
-        
-	}, []);
 
+        Promise.all([pricePromise, assetPromise]).then(([priceRes, assetRes]) => {
+
+            setBTCPrice(priceRes.data.bpi.USD.rate_float)
+            setAssets(assetRes.data.filter(asset => asset.user_id === parseInt(localStorage.user_id)));
+
+        })
+
+	}, []);
+    if (assets.length === 0){
+        return <div>Loading....</div>
+    }
+    console.log(assets)
+    // .filter(asset => asset.user_id === localStorage.user_id)
 
     const handleRefresh = () => {
         window.location.reload()    
     }
 
-    axios.get(`https://api.coindesk.com/v1/bpi/currentprice.json`)
-    .then(resp => {
-        setBTCPrice(resp.data.bpi.USD.rate_float)
-    })
-    .catch(err => {
-        console.log(err)
-    })
+
+    // Adding together total net worth by mapping over each asset
 
     assets.map(asset => {
         totalNW += asset.asset_price
     })
 
-    console.log(totalNW)
-
     // Map over assets, filter out for assets owned by logged in user only, add the total asset_value to totalNW variable
     
-    // console.log(assets)
-    // const userAssets = assets.filter(asset => asset.user_id === localStorage.user_id)
-    // console.log(userAssets)
+    console.log(assets[0].user_id)
+    console.log(localStorage.user_id)
+
+    //const answer = assets.filter(asset => asset.user_id === localStorage.user_id)
+    //console.log(answer)
+    console.log(assets)
 
     return(
         <div>
