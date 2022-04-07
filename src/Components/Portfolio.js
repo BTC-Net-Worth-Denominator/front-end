@@ -47,9 +47,7 @@ const Portfolio = () => {
 		axios
 			.get('https://btc-net-worth.herokuapp.com/api/assets')
 			.then((res) => {
-                setInterval(() => {
 				setAssets(res.data);
-                }, 1000)
 			})
 			.catch((err) => {
 				console.log(`The error is: ${err}` );
@@ -72,11 +70,9 @@ const Portfolio = () => {
 
     // Map over assets, filter out for assets owned by logged in user only, add the total asset_value to totalNW variable
     
-    console.log(assets)
-    const userAssets = assets.filter( asset => asset.user_id === localStorage.user_id )
-    console.log(userAssets)
-
-    // console.log(`Current user assets: ${currentUserAssets}`)
+    // console.log(assets)
+    // const userAssets = assets.filter(asset => asset.user_id === localStorage.user_id)
+    // console.log(userAssets)
 
     return(
         <div>
