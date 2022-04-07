@@ -74,7 +74,7 @@ const Login = () => {
             localStorage.setItem('token', token);
             localStorage.setItem('message', message);
             localStorage.setItem('user_id', user_id);
-            push('/portfolio')
+            push('/add-assets')
         })
         .catch(err => {
             console.log(err)

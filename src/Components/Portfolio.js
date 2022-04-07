@@ -32,6 +32,10 @@ const TotalStyling = styled.div`
     align-items: center;
 `
 
+const LoadingStyle = styled.div`
+    margin: 20%;
+`
+
 const initialAssets = []
 const initialUserAssets = []
 const initialPrice = 0
@@ -65,11 +69,19 @@ const Portfolio = () => {
         })
 
 	}, []);
+
     if (assets.length === 0){
-        return <div>Loading....</div>
+        return (
+
+        <LoadingStyle>
+            <center>
+            <h1>No Current Portfolio</h1>
+            </center>
+        </LoadingStyle>
+        )
+
     }
-    console.log(assets)
-    // .filter(asset => asset.user_id === localStorage.user_id)
+    
 
     const handleRefresh = () => {
         window.location.reload()    
@@ -82,14 +94,6 @@ const Portfolio = () => {
         totalNW += asset.asset_price
     })
 
-    // Map over assets, filter out for assets owned by logged in user only, add the total asset_value to totalNW variable
-    
-    console.log(assets[0].user_id)
-    console.log(localStorage.user_id)
-
-    //const answer = assets.filter(asset => asset.user_id === localStorage.user_id)
-    //console.log(answer)
-    console.log(assets)
 
     return(
         <div>

@@ -60,7 +60,9 @@ const NavBar = () => {
         localStorage.removeItem('user_id');
         push('/login')
     }
+
     console.log(localStorage)
+    
     return (
         <div style={NavStyling}>
             <div style={LogoStyling}>
