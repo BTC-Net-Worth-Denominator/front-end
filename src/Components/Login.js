@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
+import { useContext } from 'react';
+import { AccountContext } from './AccountContext';
 
 const initialMessage = ''
 
@@ -52,6 +54,7 @@ const initialCredentials = {
 
 const Login = () => {
 
+    const { setUserId } = useContext(AccountContext)
     const [ credentials, setCredentials ] = useState(initialCredentials);
     const [ loginMessage, setLoginMessage ] = useState(initialMessage);
     const { push } = useHistory();
@@ -63,6 +66,7 @@ const Login = () => {
         })
     }
 
+
     const handleSubmit = (e) => {
 
         e.preventDefault();
@@ -73,7 +77,7 @@ const Login = () => {
             console.log(resp.data)
             localStorage.setItem('token', token);
             localStorage.setItem('message', message);
-            localStorage.setItem('user_id', user_id);
+            setUserId(user_id);
             push('/add-assets')
         })
         .catch(err => {

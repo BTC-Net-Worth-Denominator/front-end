@@ -1,8 +1,8 @@
 // Imports
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
-
+import { AccountContext } from './AccountContext';
 
 // *** Styling ***
 
@@ -52,17 +52,17 @@ const NavStyling = {
 const NavBar = () => {
 
     const { push } = useHistory();
-
+    const { userId, setUserId } = useContext(AccountContext)
 
     const handleLogout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('message');
-        localStorage.removeItem('user_id');
+        setUserId(undefined)
         push('/login')
     }
 
     console.log(localStorage)
-    
+
     return (
         <div style={NavStyling}>
             <div style={LogoStyling}>
@@ -73,11 +73,11 @@ const NavBar = () => {
             <div style={NavLinkStyling}>
                     <Link to='/process' style={LinkStyling}>Process</Link>
                 <br />
-                {localStorage.user_id !== undefined &&
+                {userId &&
                     <Link to='/add-assets' style={LinkStyling}>Add Assets</Link>
                 }
                 <br />
-                {localStorage.user_id !== undefined &&
+                {userId &&
                     <Link to='/portfolio' style={LinkStyling}>View Portfolio</Link>
                 }
                 <br />

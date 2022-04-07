@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import './App.css';
+import { AccountProvider } from './Components/AccountContext';
 
 // import 
 
@@ -40,6 +41,7 @@ function App() {
   return (
     <div>
       <AppContainer>
+        <AccountProvider>
         <NavBar />
         <Switch>
           <RouteContainer>
@@ -51,6 +53,7 @@ function App() {
             <Route exact path="/" component={Home} />
           </RouteContainer>
         </Switch>
+        </AccountProvider>
       </AppContainer>
     </div>
   );

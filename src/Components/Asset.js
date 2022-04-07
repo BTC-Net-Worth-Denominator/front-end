@@ -30,7 +30,6 @@ const Asset = (props) => {
         axiosWithAuth()
         .delete(`/assets/${asset.asset_id}`)
         .then(resp => {
-            console.log(resp)
             window.location.reload()
         })
         .catch(err => {
