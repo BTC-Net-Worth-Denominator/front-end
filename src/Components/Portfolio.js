@@ -39,8 +39,8 @@ const initialPrice = 0
 const Portfolio = () => {
 
     const [assets, setAssets] = useState(initialAssets)
-    const totalNW = initialNetWorth
     const [ btcPrice, setBTCPrice ] = useState(initialPrice)
+    let totalNW = 0
 
     useEffect(() => {
         
@@ -62,11 +62,17 @@ const Portfolio = () => {
 
     axios.get(`https://api.coindesk.com/v1/bpi/currentprice.json`)
     .then(resp => {
-        setBTCPrice(resp.data.bpi.USD.rate)
+        setBTCPrice(resp.data.bpi.USD.rate_float)
     })
     .catch(err => {
         console.log(err)
     })
+
+    assets.map(asset => {
+        totalNW += asset.asset_price
+    })
+
+    console.log(totalNW)
 
     // Map over assets, filter out for assets owned by logged in user only, add the total asset_value to totalNW variable
     
@@ -97,7 +103,7 @@ const Portfolio = () => {
             <section>
                 <TotalStyling>
                     <h2>Total Net Worth</h2>
-                    <h2>{btcPrice} BTC</h2>
+                    <h2>{totalNW * (1/btcPrice)} BTC</h2>
                 </TotalStyling>
             </section>
             </PortfolioStyling>

@@ -45,9 +45,6 @@ const Asset = (props) => {
     .catch(err => {
         console.log(err)
     })
-
-    console.log(currentPrice)
-    console.log(1/currentPrice)
     
     return(
         <div >
