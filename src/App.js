@@ -16,6 +16,7 @@ import Login from './Components/Login';
 import Home from './Components/Home';
 import CreateAccount from './Components/CreateAccount';
 import AddAssets from './Components/AddAssets'
+import Footer from './Components/Footer';
 
 // Routing
 
@@ -53,6 +54,7 @@ function App() {
             <Route exact path="/" component={Home} />
           </RouteContainer>
         </Switch>
+        <Footer />
         </AccountProvider>
       </AppContainer>
     </div>
